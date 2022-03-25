@@ -1,0 +1,30 @@
+<div class="matcard">
+    <mat-card class="example card">
+        <mat-card-subtitle>Part 4</mat-card-subtitle>
+        <mat-card-content>
+<p>From the time you started your business have you either added 
+    another business,<br>
+     open another branch, launched new product or expand your business
+    in anyways?
+</p>
+<mat-radio-group [(ngModel)]="addingBusiness">
+<mat-radio-button *ngFor="let expansionOption of expansionOptions" [value]="expansionOption">{{expansionOption}}</mat-radio-button>
+</mat-radio-group>
+<p>
+    How best can you best describe the relationship between cost and expenses
+    in your business?
+</p>
+<mat-radio-group [(ngModel)]="businessCost">
+<mat-radio-button *ngFor="let cost of costs" [value]="cost">{{cost}}</mat-radio-button>
+</mat-radio-group>
+<p>
+    Has the number of customers increased comparing to the time you started
+    your business?
+</p>
+<mat-radio-group [(ngModel)]="increasedCustomers">
+<mat-radio-button *ngFor="let customer of customers" [value]="customer">{{customer}}</mat-radio-button>
+</mat-radio-group>
+</mat-card-content>
+<button class="btn btn primary btn default" (click)="close()">Next</button>
+</mat-card>
+</div>
