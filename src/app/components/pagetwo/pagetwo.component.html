@@ -1,0 +1,44 @@
+<div class="matcard">
+    <mat-card class="example-card">
+        <mat-card-content>
+            <mat-card-subtitle>Part Two</mat-card-subtitle>
+            <hr>
+            <p>
+                You had a full structured plan of how business will be?What resources you will use and whole
+                expenses of the business?
+            </p>
+            <mat-radio-group [(ngModel)]="pageTwoModel.businessPlan">
+                <mat-radio-button *ngFor="let plan of plans" [value]="plan.value">
+                    {{plan.name}}
+                </mat-radio-button>
+            </mat-radio-group>
+            <p>
+                Have you ever been through theft issues or losses caused by people you are working
+                with or by your own carelessness?
+            </p>
+            <mat-radio-group [(ngModel)]="pageTwoModel.businessLoss">
+                <mat-radio-button *ngFor="let loss of losses" [value]="loss.value">
+                    {{loss.name}}
+                </mat-radio-button>
+            </mat-radio-group>
+            <p>
+                The people you are working with which term best drscribes them?
+            </p>
+            <mat-radio-group [(ngModel)]="pageTwoModel.businessLabor">
+                <mat-radio-button *ngFor="let labor of labors" [value]="labor.value">
+                    {{labor.name}}
+                </mat-radio-button>
+            </mat-radio-group>
+
+            <p>
+                Do you have or keep financial records(expenses,income,assets and profits) of your business?
+            </p>
+            <mat-radio-group [(ngModel)]="pageTwoModel.businessRecords">
+                <mat-radio-button *ngFor="let record of records" [value]="record.value">
+                    {{record.name}}
+                </mat-radio-button>
+            </mat-radio-group>
+        </mat-card-content>
+        <button class="btn btn-primary" (click)="partThree()">Next</button>
+    </mat-card>
+</div>

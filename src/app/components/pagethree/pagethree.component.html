@@ -1,0 +1,36 @@
+<div class="matcard">
+
+<mat-card class="example-card">
+    <mat-card-subtitle>Part 3</mat-card-subtitle>
+    <mat-card-content>
+
+<p>
+    Do you have any specific training in your area of business?
+</p>
+<mat-radio-group [(ngModel)]="pageThreeModel.businessTrains">
+<mat-radio-button *ngFor="let train of trains" [value]="train.value">{{train.name}}</mat-radio-button>
+</mat-radio-group>
+<p>
+    Incase of issues and problems in your business who are you mostly like to
+    call for help
+</p>
+<mat-radio-group [(ngModel)]="pageThreeModel.businessHelp">
+<mat-radio-button *ngFor="let help of helps"[value]="help.value" >{{help.name}}</mat-radio-button>
+</mat-radio-group>
+<p>
+    Do you have any necessary business registration and 
+    compliance documents to run
+    business in Tanzania?
+</p>
+<mat-radio-group [(ngModel)]="pageThreeModel.businessCompliance">
+<mat-radio-button *ngFor="let compliance of compliances" [value]="compliance.value">{{compliance.name}}</mat-radio-button>
+</mat-radio-group>
+<p>
+    Does your family run or own a business?
+</p><mat-radio-group [(ngModel)]="pageThreeModel.businessFamily">
+<mat-radio-button *ngFor="let family of families" [value]="family.value">{{family.name}}</mat-radio-button>
+</mat-radio-group>
+</mat-card-content>
+<button class="btn btn-primary btn default" (click)="next()">Next</button>
+</mat-card>
+</div>

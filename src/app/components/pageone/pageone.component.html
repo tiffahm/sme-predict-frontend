@@ -3,29 +3,29 @@
 <mat-card class="example-card">
     <mat-card-subtitle>part 1</mat-card-subtitle>
     <mat-card-content class="cardOneContent">
-<p>
+<!-- <p>
     What type of business are you conducting?
 </p>
-<input type="text">
+<input type="text"> -->
 <p>
     What defines best your drive to start a business?
 </p>
-<mat-radio-group [(ngModel)]="businessDrive">
-    <mat-radio-button *ngFor="let drive of drives" [value]="drive">{{drive}}</mat-radio-button>
+<mat-radio-group [(ngModel)]="pageOneModel.businessDrive">
+    <mat-radio-button *ngFor="let drive of drives" [value]="drive.value">{{drive.name}}</mat-radio-button>
 
 </mat-radio-group>
          <p>
         Before starting a business have you ever conducted any business before?
     </p>
-    <mat-radio-group [(ngModel)]="businessBefore">
-    <mat-radio-button *ngFor="let business of businesses" [value]="business">{{business}}</mat-radio-button>
+    <mat-radio-group [(ngModel)]="pageOneModel.businessBefore">
+    <mat-radio-button *ngFor="let business of businesses" [value]="business.value">{{business.name}}</mat-radio-button>
 </mat-radio-group>
     <p>
     During the time you started your business, Did you seek any help
     interms of money, machines or anything you are currently using in your business?
     </p>
-    <mat-radio-group [(ngModel)]="businessHelp">
-   <mat-radio-button *ngFor="let help of helps" [value]="help">{{help}}</mat-radio-button>
+    <mat-radio-group [(ngModel)]="pageOneModel.businessHelp">
+   <mat-radio-button *ngFor="let help of helps" [value]="help.value">{{help.name}}</mat-radio-button>
 </mat-radio-group>
    
 </mat-card-content>

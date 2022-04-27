@@ -10,7 +10,7 @@
 p{
     position: relative;
     align-items: center;
-    padding-top:20px;
+    padding-top:8px;
 }
 mat-radio-button{
     padding: 5px;
