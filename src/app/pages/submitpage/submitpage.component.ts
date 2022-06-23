@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
 import { AppState } from 'src/app/states/app.state';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-submitpage',
@@ -11,9 +12,12 @@ export class SubmitpageComponent implements OnInit {
 loading = false
 jibu: any = null
   constructor(
-    private appService: AppService
+    private appService: AppService, private router:Router
     ) { }
 
+    pageOne(){
+      this.router.navigateByUrl('/one')
+    }
   ngOnInit(): void {
     this.loading = true
     this.appService.predict().then(x=>this.jibu=x)
@@ -22,6 +26,9 @@ jibu: any = null
     }).finally(()=>{
       this.loading = false
     })
+  }
+  home(){
+    this.router.navigateByUrl('');
   }
 
 }

@@ -17,13 +17,13 @@ value:0}
   ];
 
   businesses:{name:string, value:number}[] = [
-    {name:'Yes', value:0},
-    {name:'No', value:1}
+    {name:'Yes', value:1},
+    {name:'No', value:0}
   ];
-  drives:{name:string, value:number}[]=[{name:'passion',value: 0},
+  drives:{name:string, value:number}[]=[{name:'passion',value: 3},
   {name:'market needs',value: 1},
    {name:'need for money',value:2},
-    {name:'Just like everyone', value:3}]
+    {name:'Just like everyone', value:0}]
 
     constructor(
       private router: Router,

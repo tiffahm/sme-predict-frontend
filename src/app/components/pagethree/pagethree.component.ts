@@ -19,10 +19,10 @@ export class PagethreeComponent implements OnInit {
   
    
   helps:{name:string, value:number}[] = [
-    {name:'Yes',
-     value:1},
-     {name:'No',
-     value:0}
+    {name:'Family and friends(non-professionals)',
+     value:0},
+     {name:'Professionals',
+     value:1}
   ];
   
   

@@ -1,0 +1,23 @@
+.example-card {
+  position:absolute;
+  align-items: center;
+  width:80%;
+  height:30%;
+  margin-left: 30px;
+  margin-top:30px;
+}
+    
+  
+  .submit-card{
+    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  }
+
+  
+  
+  
+
+  

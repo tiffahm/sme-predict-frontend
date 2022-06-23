@@ -7,6 +7,7 @@ import { PageoneComponent } from './components/pageone/pageone.component';
 import { PagethreeComponent } from './components/pagethree/pagethree.component';
 import { PagetwoComponent } from './components/pagetwo/pagetwo.component';
 import { SubmitpageComponent } from './pages/submitpage/submitpage.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:'', component:HomepageComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'two', component:PagetwoComponent},
   {path:'three',component:PagethreeComponent},
   {path:'four',component:PagefourComponent},
-  {path:'submit', component:SubmitpageComponent}
+  {path:'submit', component:SubmitpageComponent},
+  {path:'login', component:LoginComponent}
 ];
 
 @NgModule({

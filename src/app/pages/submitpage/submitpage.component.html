@@ -1,2 +1,19 @@
-<p>submitpage works!</p>
-<h1>{{loading? 'Loading...':jibu}}</h1>
+<div class="submit-card">
+<mat-card class="example-card">
+    <mat-card-subtitle>Results</mat-card-subtitle>
+    <mat-card-title>{{loading? 'Loading...':jibu}}
+
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-title>
+    <mat-card-content>
+      <p>Above is your business survival chances,Thank you for using our Platform</p>
+    
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button mat-button color ="primary" (click)="pageOne()"> RE-EVALUATE  </button>
+      <button mat-button color="primary"> TELL US SOMETHING</button>
+      <button mat-button color="primary" (click)="home()"> FINISH</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

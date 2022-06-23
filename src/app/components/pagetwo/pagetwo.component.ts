@@ -21,17 +21,17 @@ export class PagetwoComponent implements OnInit {
   labors: { name: string, value: number }[] = [
     {
       name: 'Skilled',
-      value: 0
+      value: 3
     },
     {
       name: 'Non skilled',
-      value: 0
+      value: 1
     }, {
       name: 'Both skilled and Non skilled',
       value: 0
     },
     {
-      name: 'semi-skilled', value: 0
+      name: 'semi-skilled', value: 2
     }
   ];
   losses: { name: string, value: number }[] = [

@@ -9,24 +9,27 @@ import { AppState } from 'src/app/states/app.state';
 })
 export class PagefourComponent implements OnInit {
   
-  expansionOptions: {name:string,value:number} []=[{name:'Yes',value:0},
+  technologies: {name:string,value:number} []=[{name:'Yes',value:1},
   {name: 'No',value:0}];
 
-  costs: {name: string, value: number}[]=[
+  times: {name: string, value: number}[]=[
     {
-      name: 'Cost is greater than income',
+      name: 'two to five year',
       value: 1
     },
     {
-      name: 'Income is greater than cost',
+      name: 'zero to one year',
       value: 2
     },
-    {
-      name: 'Not Sure',
-      value: 3
-    }
+    {name:'more than six years',
+    value: 0
+
+  },
+    
   ];
-  customers:{name:string,value:number}[]=[{name:'Yes', value:0},{name:'No', value:0}];
+  expansionOptions:{name:string,value:number}[]=[{name:'Yes', value:1},{name:'No', value:0},
+  
+ ];
 
 
 
@@ -36,16 +39,16 @@ export class PagefourComponent implements OnInit {
   ngOnInit(): void {
   }
   pageFourModel = {
-    addingBusiness:undefined,
-    businessCost:undefined,
-    increasedCustomers:undefined,
+    businessTechnology:undefined,
+    businessTime:undefined,
+    businessExpansion:undefined,
   
   }
   close(){
     if (
-      this.pageFourModel.businessCost=== undefined ||
-      this.pageFourModel.addingBusiness === undefined ||
-      this.pageFourModel.increasedCustomers === undefined
+      this.pageFourModel.businessTime=== undefined ||
+      this.pageFourModel.businessExpansion === undefined ||
+      this.pageFourModel.businessTechnology === undefined
     ) {
       // console.log(this.pageFourModel)
       alert("Answer all questions.")

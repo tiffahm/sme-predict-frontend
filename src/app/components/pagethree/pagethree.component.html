@@ -3,7 +3,6 @@
 <mat-card class="example-card">
     <mat-card-subtitle>Part 3</mat-card-subtitle>
     <mat-card-content>
-
 <p>
     Do you have any specific training in your area of business?
 </p>
@@ -18,8 +17,7 @@
 <mat-radio-button *ngFor="let help of helps"[value]="help.value" >{{help.name}}</mat-radio-button>
 </mat-radio-group>
 <p>
-    Do you have any necessary business registration and 
-    compliance documents to run
+    Do you have any necessary business registration and compliance documents to run
     business in Tanzania?
 </p>
 <mat-radio-group [(ngModel)]="pageThreeModel.businessCompliance">

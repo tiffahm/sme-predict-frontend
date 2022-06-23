@@ -27,8 +27,7 @@
     <mat-radio-group [(ngModel)]="pageOneModel.businessHelp">
    <mat-radio-button *ngFor="let help of helps" [value]="help.value">{{help.name}}</mat-radio-button>
 </mat-radio-group>
-   
 </mat-card-content>
-<button class="btn btn primary btn default" (click)="partTwo()">Next</button>
+<button class="btn btn-primary btn default" (click)="partTwo()">Next</button>
 </mat-card>
 </div>
