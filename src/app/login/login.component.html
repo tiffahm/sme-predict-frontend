@@ -1,29 +1,30 @@
-<div class="home-card"
->
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Let Us Know You</mat-card-title>
-  </mat-card-header>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Username</mat-label>
-      <input matInput placeholder="Placeholder">
-    </mat-form-field>
-</p>
-<p>
-<mat-form-field appearance="outline">
-  <mat-label>Phone</mat-label>
-  <input matInput placeholder="0785647922">
-</mat-form-field>
-</p>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Business Type</mat-label>
-      <input matInput placeholder="Placeholder">
-    </mat-form-field>
-  </p>
-  <hr>
- <button class="btn btn-primary" (click)="pageOne()">LOGIN</button>
-          
-</mat-card>
-</div>
+<form class="home-card" [formGroup]="loginForm" (submit)="pageOne()">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Let Us Know You</mat-card-title>
+    </mat-card-header>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input formControlName="username" matInput />
+        <mat-error>username required</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input formControlName="phone" matInput />
+        <mat-error>phone required</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Business Type</mat-label>
+        <input formControlName="business_type" matInput />
+        <mat-error>business type required</mat-error>
+      </mat-form-field>
+    </p>
+    <hr />
+    <button class="btn btn-primary">LOGIN</button>
+  </mat-card>
+</form>
